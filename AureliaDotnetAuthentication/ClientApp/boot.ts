@@ -1,14 +1,16 @@
-﻿import { Aurelia } from 'aurelia-framework';
-import config from './app/components/account/authConfig';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap';
-
+import { Aurelia } from 'aurelia-framework';
+import authConfig from './app/components/account/authConfig';
 
 declare const IS_DEV_BUILD: boolean; // The value is supplied by Webpack during the build
 
 export function configure(aurelia: Aurelia) {
-    aurelia.use.standardConfiguration()
-        .plugin('aurelia-auth', (baseConfig) => { baseConfig.configure(config); });
+    aurelia.use
+        .standardConfiguration()
+        /* configure aurelia-authentication */
+        .plugin('aurelia-authentication', baseConfig => {
+            baseConfig.configure(authConfig);
+        });
+
 
     if (IS_DEV_BUILD) {
         aurelia.use.developmentLogging();

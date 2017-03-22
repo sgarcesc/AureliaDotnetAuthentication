@@ -1,8 +1,0 @@
-version: '2'
-
-services:
-  aureliadotnetauthentication:
-    image: aureliadotnetauthentication
-    build:
-      context: ./AureliaDotnetAuthentication
-      dockerfile: Dockerfile

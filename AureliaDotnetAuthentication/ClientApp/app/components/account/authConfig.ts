@@ -1,25 +1,11 @@
 ﻿export default {
-    baseUrl: '/',
+    loginUrl: '/api/token',
+    logoutRedirect: '#/login',
     loginRedirect: '#/',
-    logoutRedirect: '#/',
-    loginUrl: '/account/login',
-    loginRoute: '/login',
-    providers: {
-        identSrv: {
-            name: 'identSrv',
-            url: '/api/account/login',
-            authorizationEndpoint: '/api/account/authorize', //if this ends with slash --> game over
-            redirectUri: window.location.origin || window.location.protocol + '//' + window.location.host,
-            scope: ['profile', 'openid'],
-            responseType: 'code',
-            scopePrefix: '',
-            scopeDelimiter: ' ',
-            requiredUrlParams: ['scope', 'nonce'],
-            optionalUrlParams: ['display', 'state'],
-            display: 'popup',
-            type: '2.0',
-            clientId: 'jsclient',
-            popupOptions: { width: 452, height: 633 }
-        },
-    }
+    loginOnSignup: false,
+    storageChangedReload: true,    // ensure secondary tab reloading after auth status changes
+    expiredRedirect: 1,            // redirect to logoutRedirect after token expiration
+    useRefreshToken: true,         // Option to turn refresh tokens On/Off
+    autoUpdateToken: true,         // The option to enable/disable the automatic refresh of Auth tokens using Refresh Tokens
+
 };

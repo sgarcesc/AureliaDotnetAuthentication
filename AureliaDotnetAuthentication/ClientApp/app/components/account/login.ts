@@ -1,39 +1,31 @@
-﻿import { AuthService } from 'aurelia-auth';
-import { inject } from 'aurelia-framework';
+﻿import { AuthService } from 'aurelia-authentication';
+import { inject, computedFrom } from 'aurelia-framework';
 
 @inject(AuthService)
 export class Login {
     authService: AuthService;
-    email: string;
-    password: string;
-
-    constructor(authService: AuthService) {
+    constructor(authService) {
         this.authService = authService;
-
-    }
-
-    login() {
-        var creds = "grant_type=password&email=" + this.email + "&password=" + this.password;
-
-        return this.authService.login(this.email, this.password)
-            .then(response => {
-
-                console.log("success logged " + response);
-
-            })
-            .catch(err => {
-                err.json().then(function (e) {
-                    console.log("login failure : " + e.message);
-                });
-            });
     };
 
-    authenticate(name) {
+    heading = 'Login';
 
-        return this.authService.authenticate(name, false, null)
+    userName = '';
+    password = '';
 
-            .then((response) => {
-
+    login(): Promise<any> {
+        return this.authService.login({
+            username: this.userName,
+            password: this.password,
+            grant_type: "password",
+            client_id: "client_id",
+            client_secret: "client_secret"
+        }, {
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+            }).then(response => {
+                console.log("success logged " + response);
+            }).catch(err => {
+                console.log("login failure");
             });
-    }
+    };
 }

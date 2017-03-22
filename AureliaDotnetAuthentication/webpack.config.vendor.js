@@ -1,4 +1,4 @@
-﻿var isDevBuild = process.argv.indexOf('--env.prod') < 0;
+var isDevBuild = process.argv.indexOf('--env.prod') < 0;
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -16,7 +16,7 @@ module.exports = {
     },
     entry: {
         vendor: [
-            'aurelia-auth',
+            'aurelia-authentication',
             'aurelia-event-aggregator',
             'aurelia-fetch-client',
             'aurelia-framework',
@@ -31,6 +31,7 @@ module.exports = {
             'aurelia-templating-router',
             'bootstrap',
             'bootstrap/dist/css/bootstrap.css',
+            'font-awesome/css/font-awesome.css',
             'jquery'
         ],
     },

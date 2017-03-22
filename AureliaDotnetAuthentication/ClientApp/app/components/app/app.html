@@ -1,12 +1,12 @@
-﻿<template>
+<template>
     <require from="../navmenu/navmenu.html"></require>
     <require from="./app.css"></require>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-3"  if.bind="isAuthenticated">
+            <div class="col-sm-3">
                 <navmenu router.bind="router"></navmenu>
             </div>
-            <div class="${isAuthenticated ? 'col-sm-9' : 'col-sm-12'} body-content">
+            <div class="col-sm-9 body-content">
                 <router-view></router-view>
             </div>
         </div>

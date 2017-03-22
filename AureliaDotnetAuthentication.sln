@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AureliaDotnetAuthentication", "AureliaDotnetAuthentication\AureliaDotnetAuthentication.csproj", "{EED0EEB9-B5A0-46AD-AF8F-3540BABE0046}"
-EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{43707DB0-D073-4EC8-BB4E-517CD6D8BB5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AureliaDotnetAuthentication", "AureliaDotnetAuthentication\AureliaDotnetAuthentication.csproj", "{2D669192-F547-40F9-ABE9-BA109F063C22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,30 +15,18 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EED0EEB9-B5A0-46AD-AF8F-3540BABE0046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EED0EEB9-B5A0-46AD-AF8F-3540BABE0046}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EED0EEB9-B5A0-46AD-AF8F-3540BABE0046}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{EED0EEB9-B5A0-46AD-AF8F-3540BABE0046}.Debug|x64.Build.0 = Debug|Any CPU
-		{EED0EEB9-B5A0-46AD-AF8F-3540BABE0046}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{EED0EEB9-B5A0-46AD-AF8F-3540BABE0046}.Debug|x86.Build.0 = Debug|Any CPU
-		{EED0EEB9-B5A0-46AD-AF8F-3540BABE0046}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EED0EEB9-B5A0-46AD-AF8F-3540BABE0046}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EED0EEB9-B5A0-46AD-AF8F-3540BABE0046}.Release|x64.ActiveCfg = Release|Any CPU
-		{EED0EEB9-B5A0-46AD-AF8F-3540BABE0046}.Release|x64.Build.0 = Release|Any CPU
-		{EED0EEB9-B5A0-46AD-AF8F-3540BABE0046}.Release|x86.ActiveCfg = Release|Any CPU
-		{EED0EEB9-B5A0-46AD-AF8F-3540BABE0046}.Release|x86.Build.0 = Release|Any CPU
-		{43707DB0-D073-4EC8-BB4E-517CD6D8BB5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{43707DB0-D073-4EC8-BB4E-517CD6D8BB5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{43707DB0-D073-4EC8-BB4E-517CD6D8BB5A}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{43707DB0-D073-4EC8-BB4E-517CD6D8BB5A}.Debug|x64.Build.0 = Debug|Any CPU
-		{43707DB0-D073-4EC8-BB4E-517CD6D8BB5A}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{43707DB0-D073-4EC8-BB4E-517CD6D8BB5A}.Debug|x86.Build.0 = Debug|Any CPU
-		{43707DB0-D073-4EC8-BB4E-517CD6D8BB5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{43707DB0-D073-4EC8-BB4E-517CD6D8BB5A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{43707DB0-D073-4EC8-BB4E-517CD6D8BB5A}.Release|x64.ActiveCfg = Release|Any CPU
-		{43707DB0-D073-4EC8-BB4E-517CD6D8BB5A}.Release|x64.Build.0 = Release|Any CPU
-		{43707DB0-D073-4EC8-BB4E-517CD6D8BB5A}.Release|x86.ActiveCfg = Release|Any CPU
-		{43707DB0-D073-4EC8-BB4E-517CD6D8BB5A}.Release|x86.Build.0 = Release|Any CPU
+		{2D669192-F547-40F9-ABE9-BA109F063C22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D669192-F547-40F9-ABE9-BA109F063C22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D669192-F547-40F9-ABE9-BA109F063C22}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2D669192-F547-40F9-ABE9-BA109F063C22}.Debug|x64.Build.0 = Debug|Any CPU
+		{2D669192-F547-40F9-ABE9-BA109F063C22}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2D669192-F547-40F9-ABE9-BA109F063C22}.Debug|x86.Build.0 = Debug|Any CPU
+		{2D669192-F547-40F9-ABE9-BA109F063C22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D669192-F547-40F9-ABE9-BA109F063C22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D669192-F547-40F9-ABE9-BA109F063C22}.Release|x64.ActiveCfg = Release|Any CPU
+		{2D669192-F547-40F9-ABE9-BA109F063C22}.Release|x64.Build.0 = Release|Any CPU
+		{2D669192-F547-40F9-ABE9-BA109F063C22}.Release|x86.ActiveCfg = Release|Any CPU
+		{2D669192-F547-40F9-ABE9-BA109F063C22}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

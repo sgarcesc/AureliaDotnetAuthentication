@@ -1,36 +1,35 @@
-﻿import { inject, Aurelia } from 'aurelia-framework';
+import { Aurelia, inject } from 'aurelia-framework';
 import { Router, RouterConfiguration } from 'aurelia-router';
-import { FetchConfig, AuthorizeStep } from 'aurelia-auth';
+import { AuthenticateStep, FetchConfig } from 'aurelia-authentication';
+import { HttpClient } from 'aurelia-fetch-client';
+import 'isomorphic-fetch';
 
-@inject(Router, FetchConfig)
+@inject(FetchConfig)
 export class App {
     router: Router;
     fetchConfig: FetchConfig;
 
-    constructor(router: Router, fetchConfig: FetchConfig) {
-        this.router = router;
+    constructor(fetchConfig) {
         this.fetchConfig = fetchConfig;
     }
 
     configureRouter(config: RouterConfiguration, router: Router) {
         config.title = 'Aurelia';
-        config.addPipelineStep('authorize', AuthorizeStep); // Add a route filter to the authorize extensibility point.
+        config.addPipelineStep('authorize', AuthenticateStep); // Add a route filter so only authenticated uses are authorized to access some routes
         config.map([{
-            route: ['', 'home'],
+            route: [ '', 'home' ],
             name: 'home',
             settings: { icon: 'home' },
             moduleId: '../home/home',
             nav: true,
-            title: 'Home',
-            auth: true
+            title: 'Home'
         }, {
             route: 'counter',
             name: 'counter',
             settings: { icon: 'education' },
             moduleId: '../counter/counter',
             nav: true,
-            title: 'Counter',
-            auth: true
+            title: 'Counter'
         }, {
             route: 'fetch-data',
             name: 'fetchdata',
@@ -45,13 +44,14 @@ export class App {
             moduleId: '../account/login',
             nav: false,
             title: 'Login'
-        },
-        ]);
+        }]);
 
-
+        this.router = router;
     }
 
     activate() {
-        this.fetchConfig.configure();
+        // this will add the interceptor for the Authorization header to the HttpClient singleton
+        this.fetchConfig.configure(new HttpClient());
     }
+
 }
